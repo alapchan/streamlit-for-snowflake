@@ -1,0 +1,12 @@
+# Place this file at  .streamlit/config.toml  in the SAME stage/location as your app.
+# Streamlit in Snowflake reads it on startup. This sets the *base* theme to dark so
+# the app never falls back to Snowsight's light theme, even before your custom CSS
+# in theme.py is applied.
+
+[theme]
+base = "dark"
+primaryColor = "#D04A02"             # PwC orange (matches COLORS["pwc_orange"])
+backgroundColor = "#07090d"          # COLORS["bg_primary"]
+secondaryBackgroundColor = "#131a24" # COLORS["bg_card"] (sidebar / widgets)
+textColor = "#f5f7fb"                # COLORS["text_primary"]
+font = "sans-serif"                  # external Google Fonts are blocked by SiS CSP

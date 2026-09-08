@@ -1,0 +1,33 @@
+# Snowflake Account Configurations
+accounts:
+  - name: "Production"
+    account: "KHSEPYN-GYC83409"
+    user: "Chandra"
+    password: "Jhojobhojo@1234567890"
+    role: "ACCOUNTADMIN"
+    warehouse: "COMPUTE_WH"
+    env_password_key: "SNOWFLAKE_PROD_PASSWORD"
+
+  - name: "Development"
+    account: "XPPJVSQ-IK77315"
+    user: "Chandr"
+    password: "Jhojobhojo@1234567890"
+    role: "ACCOUNTADMIN"
+    warehouse: "COMPUTE_WH"
+    env_password_key: "SNOWFLAKE_DEV_PASSWORD"
+
+  - name: "Staging"
+    account: "your_staging_account.us-east-1"
+    user: "your_staging_user"
+    password: ""
+    role: "ACCOUNTADMIN"
+    warehouse: "COMPUTE_WH"
+    env_password_key: "SNOWFLAKE_STAGING_PASSWORD"
+
+# Cortex AI Configuration
+cortex:
+  model: "llama3.1-70b"           # Options: llama3.1-70b, mistral-large2, llama3.1-405b, snowflake-arctic
+  temperature: 0.1
+  max_tokens: 4096
+  analyst_semantic_models:         # Optional: paths to semantic model YAML files in stages
+    - "@my_db.my_schema.my_stage/semantic_model.yaml"
